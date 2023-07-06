@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/dashboradcss.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript" src="js/index_animations.js"></script>
+    <link rel="icon" href="img/mylogo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Dashboard</title>
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="img/mylogo.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">ROADSTR SYSTEMS</span>
+                    <span class="profession">Efficiency Is Everything</span>
+                </div>
+            </div>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="dashboard.html">
+                            <i class='bx bx-home-alt icon'></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+                <li class="nav-link">
+                    <a href="CSV_Prediction.html">
+                        <i class='bx bxs-report icon'></i>
+                        <span class="text nav-text">CSV Prediction</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="Image_Predictions.html">
+                        <i class='bx bx-image-alt icon'></i>
+                        <span class="text nav-text">Image Prediction</span>
+                    </a>
+                </li>
+                    <li class="nav-link">
+                        <a href="#" onclick="window.open('https://about-prasad-labade.netlify.app/','_blank')">
+                            <i class='bx bxs-face icon'></i>
+                            <span class="text nav-text">About</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li class="">
+                    <a href="signlog.html">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+                
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <section class="home">
+        <div class="text">Home</div>
+        <div class="container" id="container">
+            <img src="img/bg.png" width="1100" height="600" >
+        </div>
+    </section>
+    
+    <script src="js/script.js"></script> 
+
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/rechargecss.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript" src="js/index_animations.js"></script>
+    <link rel="icon" href="img/mylogo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>CSV-Predictor</title>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+            $(document).ready(function () {
+                    $('.click').click(function () {
+                        Extract_Type()
+                        setTimeout(function () {
+                            $('.popup_box').css("display", "block");
+                            $('.container').css("width", "1150px")
+                        }, 1000);
+
+                    });
+                    $('.btn2').click(function () {
+                        $('.popup_box').css("display", "none");
+                        $('.container').css("width", "1000px")
+                    });
+                });
+        </script>
+    
+    <script type="text/javascript">
+        async function Extract_Type() {
+            eel.btn_recharge($('#Sepal_Length').val(), $('#Sepal_Width').val(), $('#Petal_Length').val(), $('#Petal_Width').val())
+        };
+
+        eel.expose(recharge_return);
+        function recharge_return(temp){
+                $('#Sepal_Length').val('');
+                $('#Sepal_Width').val('');
+                $('#Petal_Length').val('');
+                $('#Petal_Width').val('');
+                flowname.innerText = temp[0];
+                accuracy.innerText = temp[2];
+                document.getElementById("myImg").src = temp[1];
+        }
+    </script>
+
+</head>
+
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="img/mylogo.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">ROADSTR SYSTEMS</span>
+                    <span class="profession">Efficiency Is Everything</span>
+                </div>
+            </div>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="nav-link">
+                    <a href="dashboard.html">
+                        <i class='bx bx-home-alt icon'></i>
+                        <span class="text nav-text">Home</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="CSV_Prediction.html">
+                        <i class='bx bxs-report icon'></i>
+                        <span class="text nav-text">CSV Prediction</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="Image_Predictions.html">
+                        <i class='bx bx-image-alt icon'></i>
+                        <span class="text nav-text">Image Prediction</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="#" onclick="window.open('https://about-prasad-labade.netlify.app/','_blank')">
+                        <i class='bx bxs-face icon'></i>
+                        <span class="text nav-text">About</span>
+                    </a>
+                </li>
+                </ul>
+                </div>
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                        <i class='bx bx-log-out icon' onclick="window.location.href='signlog.html'"></i>
+                        <span class="text nav-text" onclick="window.location.href='signlog.html'">Logout</span>
+                    </a>
+                </li>
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <section class="home">
+        <div class="text"></div>
+        <div class="container" id="container">
+            <div class="form-container sign-up-container">
+                <form action="">
+                    <h1>CSV-Predictor</h1><br>
+                    <input type="number" autocomplete="off" class="inputs" minlength="10" maxlength="10"   id="Sepal_Length" placeholder="Sepal Length">
+                    <input type="number" autocomplete="off" class="inputs" id="Sepal_Width" placeholder="Sepal Width">
+                    <input type="number" autocomplete="off" class="inputs" name="user_new_login"  id="Petal_Length" placeholder="Petal Length">
+                    <input type="number" autocomplete="off" class="inputs" id="Petal_Width" placeholder="Petal Width">
+                    <a href="#" class="click" id="button-86">SUBMIT</a>
+                        <div class="popup_box"> 
+                            <img id="myImg" src=""></img>
+                            <h3 id="flowname"></h3>
+                            <h3 id="accuracy"></h3>
+                            <div class="btns">
+                                <a href="#" class="btn2">CLOSE</a>
+                            </div>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
