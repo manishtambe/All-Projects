@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="/eel.js"></script>
+	<link rel="icon" href="img/mylogo.png">
+	<title>SignUp and Login</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<div class="container" id="container">
+<div class="form-container sign-up-container">
+
+<form action="/signup" method="post">
+	<h1>CREATE ACCOUNT</h1><br>
+	<input type="text" autocomplete="off" name="user_name" class="inputs" id="new_name" placeholder="Name">
+	<input type="tel" autocomplete="off" name="user_phone" class="inputs" id="new_phone" placeholder="Phone Number">
+	<input type="text" autocomplete="off" name="user_new_login" class="inputs" id="new_login" placeholder="User-Name">
+	<input type="password" autocomplete="off" name="user_new_password" class="inputs" id="new_pass" placeholder="Password">
+	<input type="email" autocomplete="off" name="user_new_email" class="inputs" id="new_email" placeholder="E-mail">
+	<button class="buttons">SIGN-UP</button>
+	
+</form>
+</div>
+<div class="form-container sign-in-container">
+	<form action="/log" method="post">
+		<h1>LOG-IN</h1><br>
+	<input type="text" autocomplete="off" class="inputs" name="user_login" id="get_user_login" placeholder="User-Name">
+	<input type="password" class="inputs" name="user_password" id="get_user_password" placeholder="Password" autocomplete="off"><br>
+	<button class="buttons">Log-In</button><br>
+	<span>Links to Socials.</span>
+	<div class="social-container">
+		<a href="#" onclick="window.open('https://www.instagram.com/_prasad_9952/','_blank')" class="social"><i class="fa fa-instagram"></i></a>
+		<a href="#" onclick="window.open('https://twitter.com/prasad_labade','_blank')" class="social"><i class="fa fa-twitter"></i></a>
+		<a href="#" onclick="window.open('https://www.linkedin.com/in/prasad-labade-a55122218/','_blank')"  class="social"><i class="fa fa-linkedin"></i></a>
+	</div>
+	</form>
+</div>
+<div class="overlay-container">
+	<div class="overlay">
+		<div class="overlay-panel overlay-left">
+			<h1>DISEASE PREDICTOR</h1>
+			<p>Welcome to the recharge application.</p>
+			<button class="ghost" id="signIn">Sign In</button>
+		</div>
+		<div class="overlay-panel overlay-right">
+			<h1>DISEASE PREDICTOR</h1>
+			<p>New to the Application ? <br> Enter your details and start journey with us</p>
+			<button class="ghost" id="signUp">Sign Up</button>
+		</div>
+	</div>
+</div>
+</div>
+
+<script type="text/javascript">
+	const signUpButton = document.getElementById('signUp');
+	const signInButton = document.getElementById('signIn');
+	const container = document.getElementById('container');
+
+	signUpButton.addEventListener('click', () => {
+		container.classList.add("right-panel-active");
+	});
+	signInButton.addEventListener('click', () => {
+		container.classList.remove("right-panel-active");
+	});
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+

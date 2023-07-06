@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Feedback.css">
+    <script type="text/javascript" src="Js/jquery.js"></script>
+    <link rel="icon" href="img/mylogo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="img/mylogo.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">DISEASE PREDICTOR</span>
+                    <span class="profession">Better Safe! Than Sorry!</span>
+                </div>
+            </div>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="dashboard.html">
+                            <i class='bx bx-home-alt icon'></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="Profile.html">
+                            <i class='bx bx-user icon'></i>
+                            <span class="text nav-text">Profile</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="Daibetes.html">
+                            <i class='bx bxs-virus icon'></i>
+                            <span class="text nav-text">Daibetes</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="Cancer.html">
+                            <i class='bx bxs-eyedropper icon'></i>
+                            <span class="text nav-text">Cancer</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="Feedback.html">
+                            <i class='bx bx-message icon'></i>
+                            <span class="text nav-text">FeedBack</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#" onclick="window.open('https://about-prasad-labade.netlify.app/','_blank')">
+                            <i class='bx bxs-face icon'></i>
+                            <span class="text nav-text">About</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li class="">
+                    <a href="index.html">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <section class="home">
+        <div class="text">FeedBack Page</div>
+        <div class="container" id="container">
+            <div class="form-container sign-up-container"></div>
+            <form action="/feed" method="post">
+                <input type="text" name="email_i" autocomplete="off" class="inputs" placeholder="Email-Id">
+                <input type="number" name="mobno" minlength="10" maxlength="10" autocomplete="off" class="inputs"
+                    placeholder="Phone Number">
+                <TEXTAREA id="feedbackarea" name="feedbackarea" rows="6" cols="43"
+                    placeholder="Enter your FeedBack"></TEXTAREA>
+                <button class="buttons">Submit FeedBack</button>
+            </form>
+            <% if(typeof alert !='undefined' ) { %>
+                <% alert.forEach(function(error) { %>
+                    <div style="background-color:#fff; 
+                                                border-radius: 10px;  
+                                                box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); 
+                                                position: relative; overflow: hidden;
+                                                width: 300px;
+                                                max-width: 100%;
+                                                min-height: 50px; 
+                                                margin-left: 300px;
+                                                margin-top: 20px; ">
+                        <div style="color:black;
+                                                    font: size 12px;
+                                                    margin-left: 25px;
+                                                    margin-top:12px" role="alert">
+                            <%= error.msg %>
+                        </div>
+                    </div>
+
+                    <% }) %>
+                        <% } %>
+
+                            <% if(message.success){ %>
+                                <div style="background-color:#fff; 
+                                                                border-radius: 10px;  
+                                                                box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); 
+                                                                position: relative; 
+                                                                overflow: hidden; 
+                                                                width: 300px; 
+                                                                max-width: 100%; 
+                                                                min-height: 50px;
+                                                                margin-left: 300px;
+                                                                margin-top: 20px; ">
+                                    <div style="color:black; font: size 12px; margin-left: 25px; margin-top:12px"
+                                        role="alert">
+                                        <%= message.success %>
+                                    </div>
+                                    <% } %>
+                                </div>
+        </div>
+    </section>
+
+    <script src="Js/script.js"></script>
+    <script>
+        setTimeout(function () {
+            window.location.replace("http://localhost:5000/Feedback.html");
+        }, 2000);
+    </script>
+</body>
+
+</html>

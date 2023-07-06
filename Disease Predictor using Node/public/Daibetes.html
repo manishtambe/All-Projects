@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Cancer.css">
+    <script type="text/javascript" src="Js/jquery.js"></script>
+    <link rel="icon" href="img/mylogo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Dashboard</title>
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="img/mylogo.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">DISEASE PREDICTOR</span>
+                    <span class="profession">Better Safe! Than Sorry!</span>
+                </div>
+            </div>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="dashboard.html">
+                            <i class='bx bx-home-alt icon'></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="Profile.html">
+                            <i class='bx bx-user icon'></i>
+                            <span class="text nav-text">Profile</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="Daibetes.html">
+                            <i class='bx bxs-virus icon'></i>
+                            <span class="text nav-text">Daibetes</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="Cancer.html">
+                            <i class='bx bxs-eyedropper icon'></i>
+                            <span class="text nav-text">Cancer</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="Feedback.html">
+                            <i class='bx bx-message icon'></i>
+                            <span class="text nav-text">FeedBack</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#" onclick="window.open('https://about-prasad-labade.netlify.app/','_blank')">
+                            <i class='bx bxs-face icon'></i>
+                            <span class="text nav-text">About</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li class="">
+                    <a href="index.html">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <section class="home">
+        <div class="text">Daibetes Predictor</div>
+        <div class="container" id="container">
+            <div class="form-container sign-up-container">
+                <form action="/dpred" method="post">
+                    <input type="number" autocomplete="off" name="Glucose" class="inputs" placeholder="Glucose" required>
+                    <input type="number" autocomplete="off" name="Insulin" class="inputs" placeholder="Insulin" required>
+                    <input type="number" autocomplete="off" name="BMI" step="0.01" class="inputs" placeholder="BMI" required>
+                    <input type="number" autocomplete="off" name="Age" class="inputs" placeholder="Age" required>
+                    <button class="buttons">Check For Daibetes</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <script src="Js/script.js"></script> 
+
+</body>
+
+</html>
